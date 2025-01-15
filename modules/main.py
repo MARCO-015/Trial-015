@@ -32,26 +32,26 @@ bot = Client(
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(
-       f"𝐇𝐞𝐥𝐥𝐨 ❤️\n\n❖ 𝐌𝐀𝐑𝐂𝐎 𝐔𝐍𝐈𝐕𝐄𝐑𝐒𝐄 ❖\n\n❈ I Am A Bot For Download Links From Your **TXT** File.", reply_markup=InlineKeyboardMarkup(
+       f"𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓣𝓸 ❤️\n\n❖ Λ𝗜ᎷᏋᏒ𝗦 ❤️ ❖\n\n❈ I Am A Bot For Download Links From Your **TXT** File.", reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("♛ 𝐉𝐨𝐢𝐧 𝐌𝐀𝐈𝐍 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ♛" ,url=f"https://t.me/+9avfoishHmExN2Y1") ],
+                    InlineKeyboardButton("♛ 𝐉𝐨𝐢𝐧 𝐌𝐀𝐈𝐍 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ♛" ,url=f"https://t.me/+uxqAQJ3wnstkMmQ9") ],
                     [
-                    InlineKeyboardButton("★ ＭＡＲＣＯ™ ★" ,url="https://t.me/MARCO_015") ],
+                    InlineKeyboardButton("★ Λ𝗜ᎷᏋᏒ𝗦 ❤️ ★" ,url="https://t.me/AIMERS_AKATSUKI") ],
                     [
-                    InlineKeyboardButton("🐯 𝐅𝐨𝐥𝐥𝐨𝐰 𝐌𝐞 🐯" ,url="https://t.me/MARCO_MAIN") ]                               
+                    InlineKeyboardButton("🐯 𝐅𝐨𝐥𝐥𝐨𝐰 𝐌𝐞 🐯" ,url="https://bio.site/all_aimers") ]                               
             ]))
 
-@bot.on_message(filters.command("ruko"))
+@bot.on_message(filters.command("stop"))
 async def restart_handler(_, m):
-    await m.reply_text("**ʀᴜᴋ ɢʏᴀ ꜱɪʀ 😡**", True)
+    await m.reply_text("🚦**RUK GYA MALIK**🚦", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
 
-@bot.on_message(filters.command(["marco"]))
+@bot.on_message(filters.command(["aimers"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text('**और कैसे हो😁.😎 \n\n अब 𝐓𝐗𝐓 𝐟𝐢𝐥𝐞 भेज दो, इंतजार कर रहा ⚡️**')
+    editable = await m.reply_text('****Please Send TXT file for download**')
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
@@ -73,18 +73,18 @@ async def account_login(bot: Client, m: Message):
            return
     
    
-    await editable.edit(f"**𝕋ᴏᴛᴀʟ ʟɪɴᴋ𝕤 ғᴏᴜɴᴅ ᴀʀᴇ🔗🔗 ** **{len(links)}**\n\n**जहा से शुरू करना चाहते 𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐈𝐧𝐢𝐭𝐚𝐥 𝐢𝐬 ** **1**")
+    await editable.edit(f"**Total links found are **{len(links)}**\n\n**Send From where you want 𝐓𝐨 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐈𝐧𝐢𝐭𝐚𝐥 𝐢𝐬 ** **1**")
     input0: Message = await bot.listen(editable.chat.id)
     raw_text = input0.text
     await input0.delete(True)
 
-    await editable.edit("**𝐁𝐚𝐭𝐜𝐡 का नाम लिखो 😅**")
+    await editable.edit("****Send Me Your Batch Name.**")
     input1: Message = await bot.listen(editable.chat.id)
     raw_text0 = input1.text
     await input1.delete(True)
     
 
-    await editable.edit("**𝔼ɴᴛᴇʀ ʀᴇ𝕤ᴏʟᴜᴛɪᴏɴ📸\n\n𝕼𝖚𝖆𝖑𝖎𝖙𝔂 🎬 𝕃ɪᴋᴇ 𝟷𝟺𝟺ᴘ, 𝟸𝟺𝟶ᴘ, 𝟹𝟼𝟶ᴘ, 𝟺𝟾𝟶ᴘ, 𝟽𝟸𝟶ᴘ, 𝟷𝟶𝟾𝟶ᴘ**")
+    await editable.edit("**𝔼ɴᴛᴇʀ ʀᴇ𝕤ᴏʟᴜᴛɪᴏɴ📸**\n`144` 🍃,`240` 🌱,`360` ☘️,`480` 🌿,`720` 🪴,`1080` 🌲 please choose quality.**")
     input2: Message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
     await input2.delete(True)
@@ -108,17 +108,17 @@ async def account_login(bot: Client, m: Message):
     
     
 
-    await editable.edit("**Enter A Captio to add Otherwise send**   **`ＭＡＲＣＯ™`**")
+    await editable.edit("**Enter A Captio to add Otherwise send**   **`Λ𝗜ᎷᏋᏒ𝗦 ❤️`**")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
-    highlighter  = f"️ＭＡＲＣＯ™⁪⁬⁮⁮⁮"
-    if raw_text3 == 'ＭＡＲＣＯ™':
+    highlighter  = f"️Λ𝗜ᎷᏋᏒ𝗦 ❤️⁪⁬⁮⁮⁮"
+    if raw_text3 == 'Λ𝗜ᎷᏋᏒ𝗦 ❤️':
         MR = highlighter 
     else:
         MR = raw_text3
    
-    await editable.edit("Now Send Your **Thumb url**\nEg : https://i.imghippo.com/files/yDpB6987rZU.jpg\n\nOr Send **no**")
+    await editable.edit("Now Send Your **Thumb url**\nEg : https://i.imghippo.com/files/FJAd3614SXE.jpg\n\nOr Send **no**")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
     await input6.delete(True)
@@ -182,8 +182,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**[ 🎥 ] Vid_ID:** {str(count).zfill(3)}.**\n**Tɪᴛᴛʟᴇ  »** {name1} {res} ＭＡＲＣＯ™.mkv\n𝐁𝐚𝐭𝐜𝐡 » **{raw_text0}**\n\nΣＸＴＲΛＣＴΞＤ ＢＹ: {MR}\n\n'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-                cc1 = f'**[ 📁 ] Pdf_ID:** {str(count).zfill(3)}.\n**Tɪᴛᴛʟᴇ  »** {name1} ＭＡＲＣＯ™.pdf \n𝐁𝐚𝐭𝐜𝐡 » **{raw_text0}**\n\nΣＸＴＲΛＣＴΞＤ ＢＹ: {MR}\n\n'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                cc =  f'[🎥]**Vid_id  »** {str(count).zfill(3)}**\n**Tɪᴛᴛʟᴇ  »** {name1} {res} Λ𝗜ᎷᏋᏒ𝗦 ❤️.mkv\nBᴀᴛᴄʜ Nᴀᴍᴇ » **{raw_text0}****𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 ➤ {MR}**\n\n'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                cc1 = f'[📕]**Pdf_id  »** {str(count).zfill(3)}** {name1} Λ𝗜ᎷᏋᏒ𝗦 ❤️.pdf \nBᴀᴛᴄʜ Nᴀᴍᴇ »**{raw_text0}**\n\n**𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 ➤ {MR}**\n\n'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -209,7 +209,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**⟱ डाउनलोड करके दे रहा हु थोड़ा टाइम लगेगा ⟱ »**\n\n**Name »** `{name}\n⌨ 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 » {raw_text2}`\n\n**Url »** `{url}`\n\n𝕭𝖔𝖙 𝓜α∂𝒆 𝐁𝐲 » ＭＡＲＣＯ™ ☢♔\n"
+                    Show = f"**⥥ 📥 ＤＯＷＮＬＯＤＩＮＧ 📥 :-**\n\n**📝Name »** `{name}\n❄𝐐𝐮𝐚𝐥𝐢𝐭𝐲 » {raw_text2}`\n\n**Url :-** `Kya karega URL dekhke ☠️☠️`\n\n **Bot made by 👉 Λ𝗜ᎷᏋᏒ𝗦 ❤️"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -220,13 +220,13 @@ async def account_login(bot: Client, m: Message):
 
             except Exception as e:
                 await m.reply_text(
-                    f"**फाइल ⌘ 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 में कुछ प्रॉब्लम आ गई है, वापस try करता हूं 🥺 **\n{str(e)}\n**Name** » {name}\n**Link** » {url}"
+                    f"**downloading failed 🔰『 Λ𝗜ᎷᏋᏒ𝗦 ❤️ 』🔰**\n{str(e)}\n**Name** - {name}\n**Link** - {url}"
                 )
                 continue
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("**𝐏𝐮𝐫𝐚 𝐇𝐨 𝐆𝐲𝐚 𝐉𝐢𝐢 𝐁𝐚𝐭𝐜𝐡.\nखुश रहो 😎**")
+    await m.reply_text("**DONE BRO 😁\n\nBY- Λ𝗜ᎷᏋᏒ𝗦 ❤️**")
 
 
 bot.run()
