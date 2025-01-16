@@ -151,7 +151,6 @@ async def account_login(bot: Client, m: Message):
             url = 'https://d1d34p8vz63oiq.cloudfront.net/380afa7e-c314-4d7a-8e5e-ca2167effd4a/master.mpd'
             if '/master.mpd' in url and not '/drm/' in url:
                 id = url.split("/")[-2]
-                pwtoken = os.getenv("pwtoken")
                 api_url = f'https://madxapi-d0cbf6ac738c.herokuapp.com/{id}/master.m3u8?token={pwtoken}'
                 print(api_url)
 
