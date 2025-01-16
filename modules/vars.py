@@ -1,5 +1,5 @@
 api_id = "21008992"
 api_hash = "da87f6dea5ed8cfe1a53617e33a35742"
-bot_token = "7771972842:AAEOb6dlwVX5EKvBYwif9VDFesPrKFyxw_Q"
+bot_token = "7771972842:AAFwt18xjqx9hYMY4gDnw6IxaCqz_xngegM"
 AUTH = "7548265642"
 #Bot Username = "MARCO_015"
