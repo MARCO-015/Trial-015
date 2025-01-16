@@ -26,7 +26,8 @@
         "pwtoken": {
             "description": "𝑬𝒏𝒕𝒆𝒓 𝒀𝒐𝒖𝒓 𝑻𝒐𝒌𝒆𝒏",
             "required": true
-        },
+        }
+    },
     "addons": [],
     "buildpacks": [
         {
