@@ -148,16 +148,15 @@ async def account_login(bot: Client, m: Message):
                         text = await resp.text()
                         url = re.search(r"(https://.*?playlist.m3u8.*?)\"", text).group(1)
 
-            elif '/master.mpd' in url:
-             id =  url.split("/")[-2]
-             url =  "https://d26g5bnklkwsh4.cloudfront.net/" + id + "/master.m3u8"
-
             url = 'https://d1d34p8vz63oiq.cloudfront.net/380afa7e-c314-4d7a-8e5e-ca2167effd4a/master.mpd'
             if '/master.mpd' in url and not '/drm/' in url:
                 id = url.split("/")[-2]
-                token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzc0ODUxMTEuMjcxLCJkYXRhIjp7Il9pZCI6IjY0YTEwMTJlMWNmOWI0MDAxOGI1MTQxZCIsInVzZXJuYW1lIjoiNjIwNzM4NDEwNyIsImZpcnN0TmFtZSI6IkFqIFB5dGhvbiIsImxhc3ROYW1lIjoiSkhBIiwib3JnYW5pemF0aW9uIjp7Il9pZCI6IjVlYjM5M2VlOTVmYWI3NDY4YTc5ZDE4OSIsIndlYnNpdGUiOiJwaHlzaWNzd2FsbGFoLmNvbSIsIm5hbWUiOiJQaHlzaWNzd2FsbGFoIn0sImVtYWlsIjoiYWpweXRob24yMjJAZ21haWwuY29tIiwicm9sZXMiOlsiNWIyN2JkOTY1ODQyZjk1MGE3NzhjNmVmIl0sImNvdW50cnlHcm91cCI6IklOIiwidHlwZSI6IlVTRVIifSwiaWF0IjoxNzM2ODgwMzExfQ.6lCZ87HR9L5rwyAi-4nJq68NzVqnTfaJTHDNR72NWUo'
-                api_url = f'https://madxapi-d0cbf6ac738c.herokuapp.com/{id}/master.m3u8?token={token}'
+                api_url = f'https://madxapi-d0cbf6ac738c.herokuapp.com/{id}/master.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzc0ODUxMTEuMjcxLCJkYXRhIjp7Il9pZCI6IjY0YTEwMTJlMWNmOWI0MDAxOGI1MTQxZCIsInVzZXJuYW1lIjoiNjIwNzM4NDEwNyIsImZpcnN0TmFtZSI6IkFqIFB5dGhvbiIsImxhc3ROYW1lIjoiSkhBIiwib3JnYW5pemF0aW9uIjp7Il9pZCI6IjVlYjM5M2VlOTVmYWI3NDY4YTc5ZDE4OSIsIndlYnNpdGUiOiJwaHlzaWNzd2FsbGFoLmNvbSIsIm5hbWUiOiJQaHlzaWNzd2FsbGFoIn0sImVtYWlsIjoiYWpweXRob24yMjJAZ21haWwuY29tIiwicm9sZXMiOlsiNWIyN2JkOTY1ODQyZjk1MGE3NzhjNmVmIl0sImNvdW50cnlHcm91cCI6IklOIiwidHlwZSI6IlVTRVIifSwiaWF0IjoxNzM2ODgwMzExfQ.6lCZ87HR9L5rwyAi-4nJq68NzVqnTfaJTHDNR72NWUo'
                 print(api_url)
+
+            elif '/master.mpd' in url:
+             id =  url.split("/")[-2]
+             url =  "https://d26g5bnklkwsh4.cloudfront.net/" + id + "/master.m3u8"
               
             elif 'classplusapp' in url:
                   headers = {
