@@ -32,7 +32,7 @@ bot = Client(
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(
-       f"𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓣𝓸 ❤️\n\n❖ Λ𝗜ᎷᏋᏒ𝗦 ❤️ ❖\n\n❈ I Am A Bot For Download Links From Your **TXT** File.", reply_markup=InlineKeyboardMarkup(
+       f"**Hello [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓣𝓸 ❤️\n\n❖ Λ𝗜ᎷᏋᏒ𝗦 ❤️ ❖\n\n❈ I Am A Bot For Download Links From Your **TXT** File.", reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton("♛ 𝐉𝐨𝐢𝐧 𝐌𝐀𝐈𝐍 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ♛" ,url=f"https://t.me/+uxqAQJ3wnstkMmQ9") ],
@@ -53,10 +53,12 @@ async def restart_handler(_, m):
 
 @bot.on_message(filters.command(["aimers"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text('****Please Send TXT file for download**')
+    editable = await m.reply_text('Hiii [{m.from_user.first_name}](tg://user?id={m.from_user.id}),\n****Please Send TXT file for download**')
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
+    file_name, ext = os.path.splitext(os.path.basename(x))
+    credit = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
 
     path = f"./downloads/{m.chat.id}"
 
@@ -70,7 +72,7 @@ async def account_login(bot: Client, m: Message):
        os.remove(x)
             # print(len(links)
     except:
-           await m.reply_text("**𝓜𝓪𝔃𝓪𝓴 𝓶𝓽 𝓚𝓻.**")
+           await m.reply_text("**Invalid file input.🥲**")
            os.remove(x)
            return
     
