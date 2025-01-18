@@ -161,6 +161,9 @@ async def account_login(bot: Client, m: Message):
             elif 'videos.classplusapp' in url:
                 url = requests.get(f'https://api.classplusapp.com/cams/uploader/video/jw-signed-url?url={url}', headers={'x-access-token': 'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIwOTYxOTQ2LCJvcmdJZCI6NTUyNjg3LCJ0eXBlIjoxLCJtb2JpbGUiOiI5MTcwMjgxMDk5OTIiLCJuYW1lIjoiSmF5ZXNoIENoYXVkaGFyaSIsImVtYWlsIjoiY2hhdWRoYXJpamF5ZXNoOTAxQGdtYWlsLmNvbSIsImlzSW50ZXJuYXRpb25hbCI6MCwiZGVmYXVsdExhbmd1YWdlIjoiRU4iLCJjb3VudHJ5Q29kZSI6IklOIiwiY291bnRyeUlTTyI6IjkxIiwidGltZXpvbmUiOiJHTVQrNTozMCIsImlzRGl5Ijp0cnVlLCJvcmdDb2RlIjoidmN6YWt1IiwiaXNEaXlTdWJhZG1pbiI6MCwiZmluZ2VycHJpbnRJZCI6ImM4MjEyNjRkZWJsazhmYjNlMmE2MGJkYmQ0ZWY3MmEzYjkiLCJpYXQiOjE3MzcxOTI0NTQsImV4cCI6MTczNzc5NzI1NH0.BV81fF01FcTuASDCtIHhw_deSEiPLfZCkCG9wh488pd53r3VwkUZAqDwUmr96K2M'}).json()['url']
 
+            elif 'media-cdn-a.classplusapp' in url:
+                url = requests.get(f'https://api.classplusapp.com/cams/uploader/video/jw-signed-url?url={url}', headers={'x-access-token': 'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIwOTYxOTQ2LCJvcmdJZCI6NTUyNjg3LCJ0eXBlIjoxLCJtb2JpbGUiOiI5MTcwMjgxMDk5OTIiLCJuYW1lIjoiSmF5ZXNoIENoYXVkaGFyaSIsImVtYWlsIjoiY2hhdWRoYXJpamF5ZXNoOTAxQGdtYWlsLmNvbSIsImlzSW50ZXJuYXRpb25hbCI6MCwiZGVmYXVsdExhbmd1YWdlIjoiRU4iLCJjb3VudHJ5Q29kZSI6IklOIiwiY291bnRyeUlTTyI6IjkxIiwidGltZXpvbmUiOiJHTVQrNTozMCIsImlzRGl5Ijp0cnVlLCJvcmdDb2RlIjoidmN6YWt1IiwiaXNEaXlTdWJhZG1pbiI6MCwiZmluZ2VycHJpbnRJZCI6ImM4MjEyNjRkZWJsazhmYjNlMmE2MGJkYmQ0ZWY3MmEzYjkiLCJpYXQiOjE3MzcxOTI0NTQsImV4cCI6MTczNzc5NzI1NH0.BV81fF01FcTuASDCtIHhw_deSEiPLfZCkCG9wh488pd53r3VwkUZAqDwUmr96K2M'}).json()['url']
+
             if '/master.mpd' in url and not '/drm/' in url:
                 id = url.split("/")[-2]
                 pwtoken = os.getenv('pwtoken')
